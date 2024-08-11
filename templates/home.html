@@ -20,12 +20,20 @@
       <img class="img-fluid" id="banner" src="https://98c1a872-9dec-4fa6-895f-69f9d0aea669-00-m2nbzsnkyo3s.riker.replit.dev/static/banner.jpg">
       <h2 class="text-center mt-2 mb-4">About ABV Port</h2>
       <p class="lead">
-        ABV Port is a website that allows you to view and download ABV Port project files, simulations and data structures. The goal being to disseminate the ABV Port project to the community and to display the qualifications of our team members.   
+        ABV Port is a website that allows you to view and download ABV Port project files, simulations and data structures. The goal being to disseminate the ABV Port projects to the community and to display the qualifications of our team members.   
       </p>
       <h2 class="text-center mt-2 mb-4">ABV Port Projects</h2>
-      <p class="text-center">
-        {{projects}}
-      </p>
+      <div>
+        {%for project in projects%}
+          <div style="margin-bottom:16px;">
+            <h4 style="color:rgb(0,255,0)">{{project['title']}}</h4>
+            <div><b>Description:</b> {{project['description']}}</div>
+            {% if 'finish date' in project%}
+            <div><b>Finish Date:</b> {{project['finish date']}}</div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
       <div class='text-center'>
       <button class="btn btn-primary btn-lg">Contact Us</button>
       </div>
