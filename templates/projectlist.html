@@ -1,0 +1,8 @@
+<div class="border-bottom" style="margin-bottom:16px;padding-bottom:8px;">
+  <h4 style="color:rgb(0,255,0)">{{project['title']}}</h4>
+  <div><b>Description:</b> {{project['description']}}</div>
+  {% if 'finish date' in project%}
+  <div><b>Finish Date:</b> {{project['finish date']}}</div>
+  {% endif %}
+  <button type="button" class="btn btn-outline-primary">View</button>
+</div>

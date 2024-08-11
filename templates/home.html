@@ -25,13 +25,7 @@
       <h2 class="text-center mt-2 mb-4">ABV Port Projects</h2>
       <div>
         {%for project in projects%}
-          <div style="margin-bottom:16px;">
-            <h4 style="color:rgb(0,255,0)">{{project['title']}}</h4>
-            <div><b>Description:</b> {{project['description']}}</div>
-            {% if 'finish date' in project%}
-            <div><b>Finish Date:</b> {{project['finish date']}}</div>
-            {% endif %}
-          </div>
+          {% include 'projectlist.html' %}
         {% endfor %}
       </div>
       <div class='text-center'>
